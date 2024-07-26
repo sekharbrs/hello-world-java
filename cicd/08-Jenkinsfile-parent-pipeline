@@ -11,7 +11,7 @@ pipeline {
     }
     stage ('Trigger child pipeline') {
       steps {
-        build job: '08-hello-world-child-pipeline', wait: false
+        build job: '08-hello-world-child-pipeline', wait: true
       }
     }
   }
