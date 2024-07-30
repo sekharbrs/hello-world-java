@@ -4,6 +4,7 @@ pipeline {
     disableConcurrentBuilds()
     disableResume()
     buildDiscarder(logRotator(numToKeepStr: '5'))
+    timeout(time: 20, unit: 'SECONDS')
   }
   tools {
     maven 'maven-3.6.3'
@@ -12,6 +13,7 @@ pipeline {
     stage ('Build') {
       steps {
         sh 'mvn clean package'
+        sh 'sleep 60'
       }
     }
   }
