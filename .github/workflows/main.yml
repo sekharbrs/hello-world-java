@@ -33,5 +33,5 @@ jobs:
 
     - name: Push Docker Image to Docker Hub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-app:${{ github.sha }}  # Push the image with commit hash tag
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-app:latest  # Push the image with latest tag
+        docker push ${{ secrets.DOCKER_USERNAME }}/myapp:2.0  
+      
